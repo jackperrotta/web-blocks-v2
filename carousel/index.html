@@ -1,0 +1,115 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="../css/bootstrap-replacement-global.css">
+    <link rel="stylesheet" href="../css/exsiting-custom-styles.css">
+    <style>
+    .testimonial-item {
+    position: relative;
+    width: 100vw; 
+    bottom: 20%;  
+    color: black; 
+    left: 0%; 
+    right: 0%;
+}
+
+.slide-indicator {
+    background-color: rgba(0,0,0, 0.5) !important;
+}
+
+.slide-indicator.active {
+    background-color: rgb(0,0,0) !important;
+}
+
+.slide-indicator:hover {
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">Navbar w/ text</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">mixed content</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            </ul>
+            <span class="navbar-text">
+            Navbar text with an inline element
+            </span>
+        </div>
+    </nav>
+
+    <section class="py-3">
+        <div class="container">
+            <div class="row">
+                <div id="vitrisCarousel" class="carousel slide" data-pause="hover" data-interval="5000" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#vitrisCarousel" data-slide-to="0" class="slide-indicator active"></li>
+                            <li data-target="#vitrisCarousel" data-slide-to="1" class="slide-indicator"></li>
+                            <li data-target="#vitrisCarousel" data-slide-to="2" class="slide-indicator"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="carousel-caption d-block testimonial-item mb-3">
+                                    <div class="row mx-auto">
+                                        <div class="col-md-8 mx-auto">
+                                            <img src="../img/hero/red.svg" alt="preferred home logo" class="img-fluid mb-3" style="height: 90px;">
+                                            <h5>Mike D'Amario</h5>
+                                            <p>Our company has been working with Vitris for 2 years now and we couldn’t be more satisfied with their work they have done for us. Jack in particular has been so patient and accommodating, from the starting up our website and managing it throughout the years. We highly recommend them.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-caption d-block testimonial-item mb-3">
+                                    <div class="row mx-auto">
+                                        <div class="col-md-8 mx-auto">
+                                            <img src="../img/hero/yellow.svg" alt="fixit fishtown logo" class="img-fluid mb-3" style="height: 180px; width: 180px;">
+                                            <h5>Aimen Arrak</h5>
+                                            <p>Professional and well knowledgeable company their services will exceed your expectations. Great company to work with.</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="carousel-caption d-block testimonial-item mb-3">
+                                    <div class="row mx-auto">
+                                        <div class="col-md-8 mx-auto">
+                                            <img src="../img/hero/purple.svg" alt="nick sharpe headshot" class="img-fluid rounded-circle mb-3" style="height: 180px; width: 180px;">
+                                            <h5>Nick Sharpe</h5>
+                                            <p>Young, hungry and humble, that’s the best way to describe Vitris. Thank you Jack and everyone else at Vitris for providing a warm welcome and expert services. Would recommend to anyone that’s looking to take their website to the next level!</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" style="color: black; z-index: 45;" href="#vitrisCarousel" role="button" data-slide="prev">
+                            back
+                        </a>
+                        <a class="carousel-control-next" style="color: black; z-index: 45;" href="#vitrisCarousel" role="button" data-slide="next">
+                             next
+                        </a>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+<script src="../js/bootstrap-native-v4.min.js"></script>
+</body>
+</html>
