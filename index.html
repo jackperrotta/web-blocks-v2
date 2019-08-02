@@ -7,194 +7,83 @@
     <link rel="stylesheet" href="./css/exsiting-custom-styles.css">
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <style>
-
-dl, ol, ul {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-a {
-    text-decoration: none;
-    background-color: transparent;
-}
-
-.dropdown {
-    position: relative;
-}
-    .navbar {
+    .video-background-holder {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem;
-}
-
-.navbar > [class^="container"] {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  margin-right: 1rem;
-  font-size: 1.25rem;
-  line-height: inherit;
-  white-space: nowrap;
-}
-
-.navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none;
-}
-
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-
-.navbar-nav .nav-link {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.navbar-nav .dropdown-menu {
-  position: static;
-}
-
-.navbar-text {
-  display: inline-block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 1;
-  align-items: center;
-}
-
-.navbar-toggler {
-  padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
-  line-height: 1;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-}
-
-.navbar-toggler:hover, .navbar-toggler:focus {
-  text-decoration: none;
-}
-
-.navbar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
-
-.nav-link {
-    display: block;
-    padding: .5rem 1rem;
-}
-
-@media (max-width: 991.98px) {
-  .navbar-expand-lg > [class^="container"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-  }
-  .navbar-expand-lg .navbar-nav {
-    flex-direction: row;
-  }
-  .navbar-expand-lg .navbar-nav .dropdown-menu {
-    position: absolute;
-  }
-  .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .navbar-expand-lg > [class^="container"] {
-    flex-wrap: nowrap;
-  }
-  .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-  .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
-
-.navbar-expand {
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-}
-
-.navbar-expand > [class^="container"] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.navbar-expand .navbar-nav {
-  flex-direction: row;
-}
-
-.navbar-expand .navbar-nav .dropdown-menu {
-  position: absolute;
-}
-
-.navbar-expand .navbar-nav .nav-link {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.navbar-expand > [class^="container"] {
-  flex-wrap: nowrap;
-}
-
-.navbar-expand .navbar-collapse {
-  display: flex !important;
-  flex-basis: auto;
-}
-
-.navbar-expand .navbar-toggler {
-  display: none;
-}
-
-.collapse:not(.show) {
-    display: none;
-}
-
-.collapsing {
-  position: relative;
-  height: 0;
+  background-color: rgba(0,0,0,0.1);
+  height: calc(100vh - 72px);
+  min-height: 25rem;
+  width: 100%;
   overflow: hidden;
-  transition: height 0.35s ease;
 }
 
+.video-background-holder video {
+  position: absolute;
+  /* Top and Left control video position */
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 2;
+}
+
+.video-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  z-index: 1;
+}
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg justify-content-between">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg" style="flex-direction: column; padding: 0;">
+        <div class="container-fluid order-2" style="background-color: lightgoldenrodyellow;">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="navbar-nav">
+                        <li class="pr-2">
+                            <a href="">
+                                <i>X</i>
+                                Facebook
+                            </a>
+                        </li>
+                        <li class="pr-2">
+                            <a href="">
+                                <i>X</i>
+                                Instagram
+                            </a>
+                        </li>
+                        <li class="pr-2">
+                            <a href="">
+                                <i>Y</i>
+                                215-595-8457
+                            </a>
+                        </li>
+                        <li class="pr-2">
+                            <a href="">
+                                <i>Z</i>
+                                Get Directions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid order-1" style="padding: 0.5rem 1rem;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dual-nav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -241,78 +130,29 @@ a {
         </div>
     </nav>
 
-    <!-- <nav style="position: fixed; width: 100%; background-color: whitesmoke; z-index: 30;">
-        <div style="position: absolute; height: 60px; padding: 8px; width: 100%; text-align: center;">
-            <img class="img-fluid" src="./img/vitris-full.png" alt="" style="height: 44px;">
-        </div>
-        <div style="display: flex; height: 60px; padding: 8px; z-index: 31;" class="justify-content-between">
-            <div class="order-2">
-                <img class="img-fluid" src="./img/vitris-full.png" alt="" style="height: 44px;">
-            </div>
-            
-            <ul style="display: flex; 
-            padding-right: 0.5rem;
-            padding-left: 0.5rem;
-            list-style: none;
-            margin-top: auto;
-            margin-bottom: auto;" class="order-1">
-                <li class="pr-3">
-                    <a href="#" style="text-decoration: none;">Home</a>
-                </li>
-                <li class="pr-3">
-                    <a>mixed content</a>
-                </li>
-                <li  class="pr-3">
-                    <a>Pricing</a>
-                </li>
-                <div class="dropdown">
-                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown link
-                    </a>
-                    
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+    <!-- Background video -->
+<div class="video-background-holder">
+    <div class="video-background-overlay"></div>
+    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="./vids/TrainingAndRelaxing.mp4" type="video/mp4">
+      </video>
+    <div class="video-background-content container h-100 d-flex">
+        <div class="row align-self-center">
+            <div class="col-lg-10 offset-lg-1 d-flex flex-column">
+                <img class="img-fluid w-25 order-2 align-self-center d-none" src="./img/draws/chatting.svg" alt="">
+                <div class="text-center order-1">
+                    <h1>Hello World</h1>
+                    <p>Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
                 </div>
-                <li class="pr-3">
-                    <a>
-                        Dropdown link
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-
-            <div class="my-auto order-3">
-                <a href="" class="btn btn-primary">215-595-8457</a>
-                <a href="" class="btn btn-outline-primary">Contact Us</a>
-            </div>
-        </div>
-    </nav> -->
-
-    <section class="vitrisBg" style="background-image: url(./img/hero/yellow.svg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1 d-flex flex-column">
-                    <img class="img-fluid w-25 order-2 align-self-center" src="./img/draws/chatting.svg" alt="">
-                    <div class="text-center order-1">
-                        <h1>Hello World</h1>
-                        <p>Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-                    </div>
-                    <div class="align-self-center order-5">
-                        <a href="" class="btn btn-primary">Main Call to Action</a>
-                        <a href="" class="btn btn-outline-primary">Other Call to Action</a>
-                    </div>
+                <div class="align-self-center order-5">
+                    <a href="" class="btn btn-primary">Main Call to Action</a>
+                    <a href="" class="btn btn-outline-primary">Other Call to Action</a>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+  </div>
+  <!-- End -->
     <section class="vitrisBg" style="background-image: url(./img/hero/yellow.svg);">
         <div class="container">
             <div class="row">
